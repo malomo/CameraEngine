@@ -43,7 +43,7 @@ class CameraEngineDevice {
 
     private var backCameraDevice: AVCaptureDevice!
     private var frontCameraDevice: AVCaptureDevice!
-    var micCameraDevice: AVCaptureDevice!
+    var micCameraDevice: AVCaptureDevice?
     var currentDevice: AVCaptureDevice?
     var currentPosition: AVCaptureDevicePosition = .Unspecified
     
@@ -107,7 +107,7 @@ class CameraEngineDevice {
     
     init() {
         self.configureDeviceCamera()
-        self.configureDeviceMic()
+//        self.configureDeviceMic()
         self.changeCurrentDevice(.Back)
     }
 }
